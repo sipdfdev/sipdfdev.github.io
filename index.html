@@ -16,6 +16,17 @@
     color: #1a1a1a;
     background: #ffffff;
   }
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 20px;
+    margin-bottom: 6px;
+    border-bottom: 3px solid #FECB00;
+  }
+  .masthead img { width: 64px; height: 64px; border-radius: 14px; }
+  .masthead .name { font-size: 1.35rem; font-weight: 700; line-height: 1.2; }
+  .masthead .sub { color: #5F5F5F; font-size: .92rem; }
   h1 { font-size: 1.9rem; margin-bottom: 4px; }
   h2 {
     font-size: 1.25rem;
@@ -54,10 +65,19 @@
   h2 { scroll-margin-top: 16px; }
   ul, ol { padding-left: 1.3em; }
 </style>
+<link rel="icon" href="icon.png">
 </head>
 <body>
 
-<h1>Privacy Policy — SiPDF</h1>
+<div class="masthead">
+  <img src="icon.png" alt="SiPDF">
+  <div>
+    <div class="name">SiPDF</div>
+    <div class="sub">PDF reader &amp; tools for Android</div>
+  </div>
+</div>
+
+<h1>Privacy Policy</h1>
 <div class="meta">
   <p><strong>Application:</strong> SiPDF for Android</p>
   <p><strong>Package name:</strong> <code>com.sidocs.app</code></p>
