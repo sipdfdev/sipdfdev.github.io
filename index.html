@@ -16,17 +16,6 @@
     color: #1a1a1a;
     background: #ffffff;
   }
-  .masthead {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding-bottom: 20px;
-    margin-bottom: 6px;
-    border-bottom: 3px solid #FECB00;
-  }
-  .masthead img { width: 64px; height: 64px; border-radius: 14px; }
-  .masthead .name { font-size: 1.35rem; font-weight: 700; line-height: 1.2; }
-  .masthead .sub { color: #5F5F5F; font-size: .92rem; }
   h1 { font-size: 1.9rem; margin-bottom: 4px; }
   h2 {
     font-size: 1.25rem;
@@ -44,21 +33,31 @@
   a { color: #8e7200; }
   hr { border: none; border-top: 1px solid #e3e3e3; margin: 2em 0; }
   .footer-note { color: #5f5f5f; font-size: 0.9rem; font-style: italic; margin-top: 3em; }
+  .summary {
+    background: #FFFBEF;
+    border: 1px solid #F0E3B8;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 26px 0;
+  }
+  .summary ul { margin: 12px 0; padding-inline-start: 1.2em; }
+  .summary li { margin-bottom: 8px; }
+  .toc {
+    border: 1px solid #E3E3E3;
+    border-radius: 14px;
+    padding: 18px 24px;
+    margin: 0 0 12px;
+  }
+  .toc-title { font-weight: 700; margin: 0 0 10px; }
+  .toc ol { margin: 0; padding-inline-start: 1.4em; }
+  .toc li { margin-bottom: 5px; font-size: .95rem; }
+  h2 { scroll-margin-top: 16px; }
   ul, ol { padding-left: 1.3em; }
 </style>
-<link rel="icon" href="icon.png">
 </head>
 <body>
 
-<div class="masthead">
-  <img src="icon.png" alt="SiPDF">
-  <div>
-    <div class="name">SiPDF</div>
-    <div class="sub">PDF reader &amp; tools for Android</div>
-  </div>
-</div>
-
-<h1>Privacy Policy</h1>
+<h1>Privacy Policy — SiPDF</h1>
 <div class="meta">
   <p><strong>Application:</strong> SiPDF for Android</p>
   <p><strong>Package name:</strong> <code>com.sidocs.app</code></p>
@@ -71,9 +70,42 @@
   <p><strong>Last updated:</strong> 16 August 2026</p>
 </div>
 
+
+<div class="summary">
+  <h2 id="short" style="border:0;margin-top:0">The short version</h2>
+  <ul>
+    <li><strong>Nothing is collected and nothing is transmitted.</strong> We run no servers that receive anything from the app.</li>
+    <li><strong>This version holds no internet permission</strong>, so Android itself prevents the app from opening a network connection.</li>
+    <li><strong>No account, no advertising, no analytics</strong> in this version.</li>
+    <li><strong>Your documents are opened and processed on your device</strong>, and leave the app only when you share, print or open them elsewhere.</li>
+  </ul>
+  <p style="margin-bottom:0">This summary is not a substitute for the policy below — it is here so the detail is easier to navigate, not easier to skip.</p>
+</div>
+
+<nav class="toc" aria-label="Contents">
+  <p class="toc-title">Contents</p>
+  <ol>
+    <li><a href="#sec1">Overview</a></li>
+    <li><a href="#sec2">Information We Collect</a></li>
+    <li><a href="#sec3">PDF Files and Documents</a></li>
+    <li><a href="#sec4">Password-Protected PDFs</a></li>
+    <li><a href="#sec5">Permissions</a></li>
+    <li><a href="#sec6">Internet and Network Access</a></li>
+    <li><a href="#sec7">Advertising and Analytics</a></li>
+    <li><a href="#sec8">Third-Party Components</a></li>
+    <li><a href="#sec9">Device Storage and Temporary Files</a></li>
+    <li><a href="#sec10">Sharing and Printing</a></li>
+    <li><a href="#sec11">Data Security</a></li>
+    <li><a href="#sec12">Your Rights</a></li>
+    <li><a href="#sec13">Children's Privacy</a></li>
+    <li><a href="#sec14">Changes to This Policy</a></li>
+    <li><a href="#sec15">Contact Us</a></li>
+    <li><a href="#sec16">Change History</a></li>
+  </ol>
+</nav>
 <hr>
 
-<h2>1. Overview</h2>
+<h2 id="sec1">1. Overview</h2>
 <p>This Privacy Policy explains how SiPDF handles information when you use the application.</p>
 <p>SiPDF is an offline PDF reader and toolkit. It has no user account, no sign-in, and no backend service operated by us. Your documents are opened and processed on your device.</p>
 <p>Statements in this policy about advertising, analytics and data collection describe <strong>the version named above</strong>. Section 14 explains how a future version that changes any of this would be communicated.</p>
@@ -81,7 +113,7 @@
 
 <hr>
 
-<h2>2. Information We Collect</h2>
+<h2 id="sec2">2. Information We Collect</h2>
 
 <h3>2.1 Information sent to us or to third parties</h3>
 <p><strong>None.</strong></p>
@@ -114,7 +146,7 @@
 
 <hr>
 
-<h2>3. PDF Files and Documents</h2>
+<h2 id="sec3">3. PDF Files and Documents</h2>
 <p>PDF files are processed locally on your device. SiPDF does not upload your PDF files to a remote server for viewing or processing.</p>
 <p>Every tool in the application — merge, split, extract pages, delete pages, reorder, rotate, images-to-PDF, compress, and document information — runs on your device. No document is sent to any server for processing, at any time, for any feature.</p>
 <p>Features that read the text inside a document, such as searching within an open PDF, also run entirely on your device. The text is read from the file to answer your search and is not stored as a separate index, transmitted, or retained after you close the document.</p>
@@ -122,12 +154,12 @@
 
 <hr>
 
-<h2>4. Password-Protected PDFs</h2>
+<h2 id="sec4">4. Password-Protected PDFs</h2>
 <p>If you open a password-protected PDF, the password you enter is used locally to unlock that document for viewing. SiPDF does not intentionally transmit or store your PDF password, and it is not written to any log, file or diagnostic report. The password is held only for as long as the document is open.</p>
 
 <hr>
 
-<h2>5. Permissions</h2>
+<h2 id="sec5">5. Permissions</h2>
 <p>This version of SiPDF requests <strong>no Android system permissions</strong>. It does not request:</p>
 <ul>
   <li>Internet or network access</li>
@@ -140,14 +172,14 @@
 
 <hr>
 
-<h2>6. Internet and Network Access</h2>
+<h2 id="sec6">6. Internet and Network Access</h2>
 <p>SiPDF is designed to operate locally on your device and does not require an internet connection to read or process PDF files.</p>
 <p>In this version, the application does not declare the Android <code>INTERNET</code> permission. Without that permission, Android blocks the application from opening network connections. This means the absence of network activity is enforced by the operating system rather than resting on our assurance alone.</p>
 <p>There is no telemetry, no remote configuration, no update check and no background network activity in this version.</p>
 
 <hr>
 
-<h2>7. Advertising and Analytics</h2>
+<h2 id="sec7">7. Advertising and Analytics</h2>
 <p><strong>This version of SiPDF does not display advertisements and does not include any advertising SDK.</strong></p>
 <p><strong>This version of SiPDF does not use third-party analytics, attribution, crash-reporting or behavioural tracking services.</strong></p>
 <p>We do not build a profile of you, and we do not sell or share personal information for advertising or for any other purpose.</p>
@@ -155,35 +187,35 @@
 
 <hr>
 
-<h2>8. Third-Party Components</h2>
+<h2 id="sec8">8. Third-Party Components</h2>
 <p>SiPDF uses open-source software libraries and components to provide PDF viewing, file selection, sharing and related functionality. These components operate as part of the application on your device.</p>
 <p>In this version, none of these components is an advertising, analytics, attribution, tracking or crash-reporting service, and none of them transmits your information.</p>
 <p>A complete list of these components and their licences is available inside the application under <strong>Settings → About SiPDF → Open-source licenses</strong>.</p>
 
 <hr>
 
-<h2>9. Device Storage and Temporary Files</h2>
+<h2 id="sec9">9. Device Storage and Temporary Files</h2>
 <p>During certain operations — opening a document, or running one of the PDF tools — SiPDF may create temporary working files in its private application storage. These files are used locally to perform the operation you requested and are not intentionally transmitted to us or to third-party servers.</p>
 <p>Temporary files are removed when Android clears the application's cache, when you clear the app's storage from Android settings, or when you uninstall the application.</p>
 <p><strong>Device backup.</strong> SiPDF disables Android's automatic backup for its own application data, so the information described in section 2.2 is not copied off your device by that mechanism. SiPDF operates no cloud backup service of its own and does not upload your documents anywhere. Backups that you create yourself using other applications, or backups performed by your device manufacturer or another service, are outside SiPDF's control and are governed by those providers' own policies.</p>
 
 <hr>
 
-<h2>10. Sharing and Printing</h2>
+<h2 id="sec10">10. Sharing and Printing</h2>
 <p>A document leaves SiPDF only when <strong>you</strong> explicitly choose to share it, open it in another application, or print it.</p>
 <p><strong>Sharing and Open with.</strong> Android's share menu passes the file to the application you select. <strong>That application is not covered by this policy.</strong> Once a document is handed to another app — email, messaging, cloud storage or another PDF reader — it is governed by that application's own privacy policy and terms. We have no control over, and no visibility into, what that application does with your file.</p>
 <p><strong>Printing.</strong> When you print, SiPDF hands the document to Android's own print framework, which passes it to the print service you choose. SiPDF does not communicate with a printer itself, and it does not need internet access to print: if you print to a network or wireless printer, the connection is made by the print service — a separate application supplied by your printer's manufacturer or by Android — under its own permissions and privacy policy.</p>
 
 <hr>
 
-<h2>11. Data Security</h2>
+<h2 id="sec11">11. Data Security</h2>
 <p>Because no information is collected or transmitted, there is no data held on any server of ours, no copy of your information in our possession, and nothing for us to disclose, sell or expose in a data breach.</p>
 <p>On your device, the information described in section 2.2 is stored in the application's private storage area, which Android keeps isolated from other applications. It is kept until you clear it using the app's own settings or uninstall the application.</p>
 <p>No method of storage is completely secure. The security of information on your device also depends on your device's own protections, such as your screen lock and system updates.</p>
 
 <hr>
 
-<h2>12. Your Rights</h2>
+<h2 id="sec12">12. Your Rights</h2>
 <p>Depending on where you live, data protection laws may give you rights over personal information held about you. These include the Data Privacy Act of 2012 (Republic Act No. 10173) in the Philippines, the GDPR in the European Economic Area and the United Kingdom, and the CCPA in California, among others. Such rights typically include access, correction, deletion, portability and objection.</p>
 <p>In this version of SiPDF we hold no personal information about you, so there is nothing for us to provide, correct, export or delete on your behalf. The information described in section 2.2 is under your direct control on your own device and can be removed at any time using the application's settings.</p>
 <p>If you have a question about any of this, contact us using the details in section 15.</p>
@@ -192,12 +224,12 @@
 
 <hr>
 
-<h2>13. Children's Privacy</h2>
+<h2 id="sec13">13. Children's Privacy</h2>
 <p>SiPDF is a general-purpose document reader and is not directed at children. It does not knowingly collect information from anyone, including children, because it does not collect information at all.</p>
 
 <hr>
 
-<h2>14. Changes to This Policy</h2>
+<h2 id="sec14">14. Changes to This Policy</h2>
 <p>We may update this Privacy Policy from time to time. The updated version will be published on this page with a revised effective date and an entry in section 16.</p>
 <p>SiPDF will receive updates over time, and a future version may handle information differently. Features that would change this policy include analytics, crash reporting, advertising, or an optional account or cloud sync.</p>
 <p>If any future version of SiPDF introduces any of these, then in the <strong>same release that introduces it</strong>:</p>
@@ -210,7 +242,7 @@
 
 <hr>
 
-<h2>15. Contact Us</h2>
+<h2 id="sec15">15. Contact Us</h2>
 <p>If you have questions about this Privacy Policy or about SiPDF's privacy practices, contact us at:</p>
 <p><strong>Email:</strong> <a href="mailto:sipdfdev@gmail.com">sipdfdev@gmail.com</a><br>
 <strong>Publisher:</strong> Banana Technologies Incorporated<br>
@@ -219,7 +251,7 @@
 
 <hr>
 
-<h2>16. Change History</h2>
+<h2 id="sec16">16. Change History</h2>
 <table>
   <tr><th>Date</th><th>Version</th><th>Change</th></tr>
   <tr><td>16 August 2026</td><td>1.0.0</td><td>Added two locally stored items to the list: the first-run welcome screen&#39;s &quot;already seen&quot; flag, and the display language if you choose one instead of following your device. No change to what is collected or transmitted — nothing is, and the release build still holds no internet permission.</td></tr>
